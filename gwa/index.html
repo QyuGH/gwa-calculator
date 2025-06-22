@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISATU GWA Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-text-container">
+            <h1 class="header-headline">
+                ISATU GWA Calculator
+            </h1>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <section class="main-section">
+
+        <div class="input-container">
+            <div class="instructions">
+                <h1>
+                    How to use? 
+                </h1>
+                <p class="instruction-text">
+                    <span class="symbol">&#9432;</span> 
+                    Enter your course grade and units and click the add button to add in your courses.
+                    Course codes are optional but recommened for a better overview.
+                </p>
+            </div>
+
+            <div class="columns">
+                <p>Course Code</p>
+                <p>Grade</p>
+                <p>Unit</p>
+            </div>
+
+            <div class="form-container">
+                
+                <div class="course-name">
+                    <label for="course" id="course-label">Course Code</label>
+                    <input id="course-code" type="text" name="course" placeholder="e.g. CS 101">
+                </div>
+                    
+                <div class="grade-container">
+                    <label for="grades" id="grade-label">Grade</label>
+                    <select name="grades" id="grades" required>
+                    </select>
+                </div>
+                
+                <div class="unit-container">
+                    <label for="unit"  id="unit-label">Unit</label>
+                    <input id="unit" type="number" min="1" name="unit" value="3" required>
+                </div>
+
+            </div>
+
+            <div class="btn-container">
+                <button class="main-btn" id="add">Add Course</button>
+                <button class="main-btn" id="calculate">Calculate GWA</button>
+            </div>
+            
+        </div>
+
+        <div id="result">
+            
+        </div>
+
+        <div class="course-container" id="course-table">
+            <div class="headline">
+                <h1>Added Course</h1>
+            </div>
+            <table>
+                <thead>
+                    <tr class="table-head">
+                        <th>Course</th>
+                        <th>Grade</th>
+                        <th>Unit</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    
+                </tbody>
+            </table>
+            <div id="message"><p>No course added yet...</p></div>
+        </div>
+
+        <div class="formula-container">
+            <div class="formula">
+                GWA = ∑(Grade x Units) / ∑(Units)
+            </div>
+            <p>
+                The General Weighted Average (GWA) is computed by multiplying each grade by its corresponding number of units. 
+                The resulting values are then summed, and the total is divided by the sum of all the course units.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>2025 &copy; All rights reserved.</p>
+    </footer>
+
+    <script src="grades.js"></script>
+    <script src="courses.js"></script>
+</body>
+</html>
