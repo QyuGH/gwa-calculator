@@ -34,7 +34,7 @@ function addCourse(){
     }
     courseId++;
 
-    courses.push({courseId: uniqueId, course: courseCodeValue, grade: gradeValue, unit: unitValue});
+    courses.push({courseId: uniqueId, course: courseCodeValue.toUpperCase(), grade: gradeValue, unit: unitValue});
     sessionStorage.setItem('courses', JSON.stringify(courses));
     sessionStorage.setItem('courseId', courseId.toString());
 

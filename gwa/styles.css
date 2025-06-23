@@ -34,6 +34,14 @@
     color: white;
 }
 
+.formula-description {
+    font-size: 1rem;
+}
+
+.formula {
+    font-size: 1.5rem;
+}
+
 #result {
     display: none;
     width: 100%;

@@ -151,4 +151,8 @@ label {
         margin: auto;
         width: 100%;
     }
+    
+    .formula-description {
+        font-size: .5rem;
+    }
 }
