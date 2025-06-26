@@ -85,12 +85,12 @@ function appendTable(courses, tableBody, message){
     });
 }
 
-let creditUnit = 0;
-let totalUnit = 0;
-let gwa = 0;
 const resultContainer = document.getElementById("result");
 
 function calculateGWA(){
+    let creditUnit = 0;
+    let totalUnit = 0;
+    let gwa = 0;
 
     if (courses.length === 0){
         resultContainer.style.display = "block";
@@ -107,7 +107,7 @@ function calculateGWA(){
     resultContainer.style.display = "block";
     resultContainer.innerHTML = `
         <div class="gwa-result">
-            <p><strong>📊 Your General Weighted Average (GWA) is:</strong></p>
+            <p><strong>Your General Weighted Average (GWA) is:</strong></p>
             <h2>${gwa.toFixed(2)}</h2>
         </div>
     `;
