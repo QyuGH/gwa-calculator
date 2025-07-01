@@ -59,3 +59,19 @@
     color: var(--blue);
 }
 
+footer p {
+    margin-bottom: .5rem;
+}
+
+.external-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+@media (max-width: 580px){
+    footer p {
+        font-size: .75rem;
+    }
+}
+
